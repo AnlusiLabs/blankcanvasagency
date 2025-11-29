@@ -109,11 +109,10 @@ const Cases = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [selectedCase, setSelectedCase] = useState<CaseItem | null>(null);
-  const [scrollDirection, setScrollDirection] = useState<'down' | 'up'>('down');
   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
 
-  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>, cardId: number) => {
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     const rect = e.currentTarget.getBoundingClientRect();
     setCursorPosition({
       x: e.clientX - rect.left,
@@ -152,10 +151,7 @@ const Cases = () => {
         scrub: 1,
         start: 'top top',
         end: () => `+=${totalScroll + 900}`,
-        invalidateOnRefresh: true,
-        onUpdate: (self) => {
-          setScrollDirection(self.direction === 1 ? 'down' : 'up');
-        }
+        invalidateOnRefresh: true
       }
     });
 
@@ -238,7 +234,7 @@ const Cases = () => {
               key={caseItem.id}
               className="case-card"
               onClick={() => openModal(caseItem)}
-              onMouseMove={(e) => handleMouseMove(e, caseItem.id)}
+              onMouseMove={handleMouseMove}
               onMouseEnter={() => setHoveredCard(caseItem.id)}
               onMouseLeave={() => setHoveredCard(null)}
             >
