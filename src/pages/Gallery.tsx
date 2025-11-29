@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { useTransform, useScroll, motion } from 'framer-motion';
-import '../styles/Gallery.css';
+import '../styles/gallery.css';
 
 const images = [
   "DSC02139.jpg",
