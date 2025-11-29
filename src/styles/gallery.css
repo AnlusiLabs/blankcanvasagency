@@ -1,0 +1,49 @@
+.gallery {
+  position: relative;
+  width: 100%;
+  min-height: 150vh;
+  background: rgb(45, 45, 45);
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.gallery-inner {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  gap: 2vw;
+  padding: 2vw;
+  overflow: visible;
+}
+
+.gallery .column {
+  position: relative;
+  width: 25%;
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 2vw;
+  will-change: transform;
+}
+
+.gallery .column .imageContainer {
+  height: auto;
+  flex: 1 1 0;
+  width: 100%;
+  position: relative;
+  border-radius: 1vw;
+  overflow: hidden;
+  min-height: 400px;
+}
+
+.gallery .column .imageContainer img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+

@@ -1,0 +1,297 @@
+/* Navbar Styles */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem 3rem;
+  z-index: 1000;
+  background-color: transparent;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  font-family: "Manrope", sans-serif;
+}
+
+.navbar.navbar-hidden {
+  transform: translateY(-100%);
+}
+
+.navbar.scrolled {
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+/* Logo */
+.navbar-logo a {
+  font-size: 0.95rem;
+  font-weight: 400;
+  text-transform: lowercase;
+  font-variant: small-caps;
+  color: #1a1a1a;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+  font-family: "Manrope", sans-serif;
+}
+
+.navbar-logo a:hover {
+  opacity: 0.7;
+}
+
+/* Navigation Links */
+.navbar-links {
+  display: flex;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.navbar-link {
+  position: relative;
+  font-size: 0.95rem;
+  font-weight: 400;
+  text-transform: lowercase;
+  font-variant: small-caps;
+  color: #1a1a1a;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+  font-family: "Manrope", sans-serif;
+}
+
+.navbar-link:hover {
+  opacity: 0.7;
+}
+
+.nav-underline {
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #1a1a1a;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+/* Get in Touch Button */
+.get-in-touch-btn {
+  padding: 0.75rem 2rem;
+  font-size: 0.95rem;
+  font-weight: 400;
+  text-transform: lowercase;
+  font-variant: small-caps;
+  color: #1a1a1a;
+  background-color: transparent;
+  border: 1px solid #1a1a1a;
+  border-radius: 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: "Manrope", sans-serif;
+}
+
+.get-in-touch-btn:hover {
+  background-color: #1a1a1a;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* Hamburger Menu */
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.hamburger-line {
+  width: 25px;
+  height: 2px;
+  background-color: #1a1a1a;
+  transition: all 0.3s ease;
+}
+
+.hamburger-menu:hover .hamburger-line {
+  background-color: #666;
+}
+
+/* Close Menu Button */
+.close-menu-btn {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  display: none;
+}
+
+.close-line {
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  background-color: #1a1a1a;
+  top: 50%;
+  left: 0;
+  transition: all 0.3s ease;
+}
+
+.close-line:nth-child(1) {
+  transform: rotate(45deg);
+}
+
+.close-line:nth-child(2) {
+  transform: rotate(-45deg);
+}
+
+.close-menu-btn:hover .close-line {
+  background-color: #666;
+}
+
+/* Mobile/Desktop Toggle */
+.mobile-only {
+  display: none;
+}
+
+.desktop-only {
+  display: block;
+}
+
+.mobile-menu-cta {
+  display: none;
+}
+
+/* Responsive Design */
+@media (min-width: 1920px) {
+  .navbar {
+    padding: 2.5rem 4rem;
+  }
+
+  .navbar-logo a {
+    font-size: 1rem;
+  }
+
+  .navbar-links {
+    gap: 3rem;
+  }
+
+  .navbar-link {
+    font-size: 0.95rem;
+  }
+
+  .get-in-touch-btn {
+    padding: 0.85rem 2.25rem;
+    font-size: 0.95rem;
+  }
+}
+
+@media (min-width: 2560px) {
+  .navbar {
+    padding: 3rem 5rem;
+  }
+
+  .navbar-logo a {
+    font-size: 1.1rem;
+  }
+
+  .navbar-links {
+    gap: 3.5rem;
+  }
+
+  .navbar-link {
+    font-size: 1.05rem;
+  }
+
+  .get-in-touch-btn {
+    padding: 1rem 2.5rem;
+    font-size: 1.05rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 1.5rem 2rem;
+  }
+
+  .navbar-links {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #ffffff;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    z-index: 999;
+  }
+
+  .navbar-links.mobile-menu-open {
+    display: flex;
+  }
+
+  .navbar-links.mobile-menu-open .close-menu-btn {
+    display: block;
+  }
+
+  .navbar-links.mobile-menu-open .mobile-menu-cta {
+    display: block;
+    margin-top: 2rem;
+  }
+
+  .navbar-link {
+    font-size: 1.5rem;
+  }
+
+  .navbar-logo a {
+    font-size: 0.8rem;
+  }
+
+  .desktop-only {
+    display: none;
+  }
+
+  .mobile-only {
+    display: flex;
+    z-index: 1000;
+  }
+
+  /* Hamburger animation when open */
+  .hamburger-menu.open .hamburger-line:nth-child(1) {
+    transform: rotate(45deg) translate(7px, 7px);
+  }
+
+  .hamburger-menu.open .hamburger-line:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger-menu.open .hamburger-line:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 1rem 1.5rem;
+  }
+
+  .navbar-logo a {
+    font-size: 0.7rem;
+  }
+
+  .hamburger-line {
+    width: 22px;
+  }
+}
