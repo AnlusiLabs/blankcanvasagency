@@ -158,7 +158,7 @@ const Services = () => {
   };
 
   return (
-    <div className="services-section" ref={sectionRef} id="services">
+    <div className="services-section" ref={sectionRef} id="services-section">
       <div className="services-header">
         <h2 className="services-title">SERVICES</h2>
       </div>

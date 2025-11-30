@@ -69,6 +69,14 @@ const Navbar = () => {
     setIsMenuOpen(false);
   };
 
+  const scrollToSection = (sectionId: string) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+    closeMenu();
+  };
+
   return (
     <nav className={`navbar ${isHidden ? 'navbar-hidden' : ''}`} ref={navRef}>
       <div className="navbar-container">
@@ -80,26 +88,26 @@ const Navbar = () => {
             <span className="close-line"></span>
             <span className="close-line"></span>
           </button>
-          <a href="#about" className="navbar-link" onMouseEnter={handleNavLinkHover} onMouseLeave={handleNavLinkLeave} onClick={closeMenu}>
+          <a href="#about" className="navbar-link" onMouseEnter={handleNavLinkHover} onMouseLeave={handleNavLinkLeave} onClick={(e) => { e.preventDefault(); scrollToSection('about'); }}>
             about
             <span className="nav-underline"></span>
           </a>
-          <a href="#services" className="navbar-link" onMouseEnter={handleNavLinkHover} onMouseLeave={handleNavLinkLeave} onClick={closeMenu}>
+          <a href="#services-section" className="navbar-link" onMouseEnter={handleNavLinkHover} onMouseLeave={handleNavLinkLeave} onClick={(e) => { e.preventDefault(); scrollToSection('services-section'); }}>
             services
             <span className="nav-underline"></span>
           </a>
-          <a href="#cases" className="navbar-link" onMouseEnter={handleNavLinkHover} onMouseLeave={handleNavLinkLeave} onClick={closeMenu}>
+          <a href="#cases" className="navbar-link" onMouseEnter={handleNavLinkHover} onMouseLeave={handleNavLinkLeave} onClick={(e) => { e.preventDefault(); scrollToSection('cases'); }}>
             cases
             <span className="nav-underline"></span>
           </a>
-          <a href="#faqs" className="navbar-link" onMouseEnter={handleNavLinkHover} onMouseLeave={handleNavLinkLeave} onClick={closeMenu}>
+          <a href="#faqs" className="navbar-link" onMouseEnter={handleNavLinkHover} onMouseLeave={handleNavLinkLeave} onClick={(e) => { e.preventDefault(); scrollToSection('faqs'); }}>
             faqs
             <span className="nav-underline"></span>
           </a>
-          <button className="get-in-touch-btn mobile-menu-cta" onClick={closeMenu}>get in touch</button>
+          <button className="get-in-touch-btn mobile-menu-cta" onClick={() => scrollToSection('contact')}>get in touch</button>
         </div>
         <div className="navbar-cta">
-          <button className="get-in-touch-btn desktop-only">get in touch</button>
+          <button className="get-in-touch-btn desktop-only" onClick={() => scrollToSection('contact')}>get in touch</button>
           <button className={`hamburger-menu mobile-only ${isMenuOpen ? 'open' : ''}`} onClick={toggleMenu}>
             <span className="hamburger-line"></span>
             <span className="hamburger-line"></span>

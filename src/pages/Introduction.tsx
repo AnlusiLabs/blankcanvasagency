@@ -73,6 +73,13 @@ const Introduction = () => {
     return `${displayHours}:${minutes}${period}`;
   };
 
+  const scrollToServices = () => {
+    const servicesSection = document.getElementById('services-section');
+    if (servicesSection) {
+      servicesSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <>
       <Navbar />
@@ -95,7 +102,7 @@ const Introduction = () => {
 
           {/* Middle Column */}
           <div className="intro-column intro-middle">
-            <button className="plus-button">
+            <button className="plus-button" onClick={scrollToServices}>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M12 5V19M5 12H19" stroke="white" strokeWidth="2" strokeLinecap="round"/>
               </svg>

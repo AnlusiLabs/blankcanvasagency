@@ -44,6 +44,13 @@ const Contact = () => {
     window.open('https://wa.me/27671571147', '_blank');
   };
 
+  const handleBookCallClick = () => {
+    const formSection = document.querySelector('.contact-form-section');
+    if (formSection) {
+      formSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   const handleServiceToggle = (service: string) => {
     setSelectedServices(prev =>
       prev.includes(service)
@@ -80,7 +87,7 @@ const Contact = () => {
 
         <div className="contact-right">
           <div className="contact-accordion-item">
-            <button className="contact-accordion-btn">
+            <button className="contact-accordion-btn" onClick={handleBookCallClick}>
               <span className="contact-accordion-text">BOOK CALL</span>
               <span className="contact-accordion-icon">+</span>
             </button>
