@@ -27,7 +27,7 @@ const Footer = () => {
             onMouseLeave={() => setShowEmail(false)}
           >
             <p className="footer-email">
-              {showEmail ? 'business@blankcanvaagency.com' : 'Email Us'}
+              {showEmail ? 'sales@blankcanvasagency.com' : 'Email Us'}
             </p>
           </div>
         </div>
@@ -61,7 +61,7 @@ const Footer = () => {
           <div className="footer-bottom-links">
             <button onClick={scrollToTop} className="footer-link-btn">Back on top</button>
             <a href="#privacy" className="footer-link">Privacy Policy</a>
-            <p className="footer-credit">made by AnLuSi</p>
+            <a href="https://www.anlusi.co.za/" target="_blank" rel="noopener noreferrer" className="footer-credit-link">made by AnLuSi</a>
           </div>
         </div>
       </div>

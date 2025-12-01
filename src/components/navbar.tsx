@@ -6,7 +6,6 @@ const Navbar = () => {
   const navRef = useRef<HTMLDivElement>(null);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isHidden, setIsHidden] = useState(false);
-  const lastScrollY = useRef(0);
 
   useEffect(() => {
     if (navRef.current) {
@@ -17,19 +16,17 @@ const Navbar = () => {
       );
     }
 
-    // Hide navbar on scroll down
+    // Hide navbar on any scroll
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
       
-      if (currentScrollY > lastScrollY.current && currentScrollY > 50) {
-        // Scrolling down
+      if (currentScrollY > 10) {
+        // Hide navbar when scrolling
         setIsHidden(true);
-      } else if (currentScrollY < lastScrollY.current) {
-        // Scrolling up
+      } else {
+        // Show navbar when at the very top
         setIsHidden(false);
       }
-      
-      lastScrollY.current = currentScrollY;
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });

@@ -185,6 +185,18 @@
   color: #ffffff;
 }
 
+.footer-credit-link {
+  font-size: 0.85rem;
+  font-weight: 300;
+  color: #666666;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-credit-link:hover {
+  color: #ffffff;
+}
+
 .footer-credit {
   font-size: 0.85rem;
   font-weight: 300;
