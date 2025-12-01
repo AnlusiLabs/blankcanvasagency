@@ -46,4 +46,59 @@
   height: 100%;
 }
 
+/* Mobile Responsive Design */
+@media (max-width: 768px) {
+  .gallery {
+    min-height: 120vh;
+  }
 
+  .gallery-inner {
+    gap: 3vw;
+    padding: 3vw;
+    flex-wrap: wrap;
+  }
+
+  .gallery .column {
+    width: 48%;
+    min-width: unset;
+    gap: 3vw;
+  }
+
+  .gallery .column:nth-child(3),
+  .gallery .column:nth-child(4) {
+    display: none;
+  }
+
+  .gallery .column .imageContainer {
+    min-height: 250px;
+    border-radius: 2vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery {
+    min-height: 100vh;
+  }
+
+  .gallery-inner {
+    flex-direction: column;
+    gap: 4vw;
+    padding: 4vw;
+  }
+
+  .gallery .column {
+    width: 100%;
+    gap: 4vw;
+  }
+
+  .gallery .column:nth-child(2),
+  .gallery .column:nth-child(3),
+  .gallery .column:nth-child(4) {
+    display: none;
+  }
+
+  .gallery .column .imageContainer {
+    min-height: 300px;
+    border-radius: 3vw;
+  }
+}

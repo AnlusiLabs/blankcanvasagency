@@ -444,4 +444,47 @@
   .cases-heading {
     font-size: 1.5rem;
   }
+
+  /* Marquee Mobile Styles */
+  .services-marquee {
+    padding: 2rem 0;
+    margin-top: 3rem;
+  }
+
+  .marquee-line {
+    margin-bottom: 1.5rem;
+  }
+
+  .marquee-content {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .cases-header {
+    gap: 2rem;
+  }
+
+  .case-image-wrapper {
+    width: 250px;
+    height: 350px;
+  }
+
+  .cases-heading {
+    font-size: 1.2rem;
+  }
+
+  /* Marquee Small Mobile Styles */
+  .services-marquee {
+    padding: 1.5rem 0;
+    margin-top: 2rem;
+  }
+
+  .marquee-line {
+    margin-bottom: 1rem;
+  }
+
+  .marquee-content {
+    font-size: 2rem;
+  }
 }
