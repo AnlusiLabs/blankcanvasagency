@@ -15,7 +15,7 @@ const faqsData: FAQItem[] = [
   {
     id: '01',
     question: 'How involved will I be in the creative process?',
-    answer: "You'll be actively involved throughout the entire project to ensure you're comfortable and fully informed. Once we've signed the contract, we begin with a comprehensive brainstorming session where we dive deep into your needs, preferences, and vision. From there, we maintain regular communication during the execution phase, keeping you updated through email and dedicated WhatsApp or Telegram groups. This way, you're always in the loop, providing feedback and making decisions in real time to ensure the project aligns perfectly with your expectations."
+    answer: "You'll be actively involved throughout the entire project to ensure you're comfortable and fully informed. Once we've signed the contract, we begin with a comprehensive brainstorming session where we dive deep into your needs, preferences, and vision. From there, we maintain regular communication during the execution phase, keeping you updated through email and dedicated WhatsApp group. This way, you're always in the loop, providing feedback and making decisions in real time to ensure the project aligns perfectly with your expectations."
   },
   {
     id: '02',
@@ -35,7 +35,7 @@ const faqsData: FAQItem[] = [
   {
     id: '05',
     question: 'What industries do we specialize in?',
-    answer: "Our primary focus is on the hospitality, food and beverage (f&b), and fashion industries, where we've developed deep expertise in creating standout brands. Recently, we've been taking on more creative tech projects, driven by our passion for innovation and cutting-edge design."
+    answer: "Our primary focus is on the hospitality, food and beverage (f&b),  fashion industries, luxury , lifestyle and corporate brands where we've developed deep expertise in creating standout brands. Recently, we've been taking on more creative tech projects, driven by our passion for innovation and cutting-edge design."
   },
   {
     id: '06',
