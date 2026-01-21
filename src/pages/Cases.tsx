@@ -220,7 +220,12 @@ const Cases = () => {
           </div>
 
           <div className="cases-right">
-            <button className="skip-btn">SKIP NOW</button>
+            <button className="skip-btn" onClick={() => {
+              const benefitsSection = document.getElementById('benefits');
+              if (benefitsSection) {
+                benefitsSection.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}>SKIP NOW</button>
             <p className="scroll-indicator">
               scroll down/up to see more
             </p>
