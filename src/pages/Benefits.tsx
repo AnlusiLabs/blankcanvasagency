@@ -38,7 +38,7 @@ const Benefits = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const wordRef = useRef<HTMLSpanElement>(null);
   const [currentWord, setCurrentWord] = useState(0);
-  const words = ['RECOGNITION', 'SUCCESS', 'MONEY'];
+  const words = ['RECOGNITION', 'SUCCESS', 'REVENUE'];
 
   useEffect(() => {
     if (sectionRef.current) {
